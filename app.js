@@ -3,7 +3,7 @@ dotenv.config();
 
 import express from 'express';
 //import {session} from 'express-session';
-import userRoutes from './routes/userRoutes.js'
+import userRoutes from './routes/userRoutes.js';
 import nocache from 'nocache';
 import connectDB from './config/db.js';
 

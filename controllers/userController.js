@@ -1,7 +1,7 @@
 export function renderRegister(req,res){
-    return res.render('userRegister')
+    return res.render('userViews/userRegister')
 }
 
 export function renderLoginPage(req,res){
-    return res.render('userLogin')
+    return res.render('userViews/userLogin')
 }
