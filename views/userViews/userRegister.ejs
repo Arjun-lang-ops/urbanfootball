@@ -44,9 +44,11 @@
 <a class="text-slate-900 dark:text-white text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Sale</a>
 </div>
 <div class="flex gap-2">
-<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Log In</span>
+<a href="/login">
+    <button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary hover:bg-blue-600 transition-colors text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">LogIn</span>
 </button>
+</a>
 </div>
 </div>
 <div class="md:hidden">
@@ -72,7 +74,7 @@
 <div class="flex flex-col gap-2">
 
 <div class="relative">
-<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 text-base font-normal leading-normal transition-all" placeholder="Enter your full name" type="text" id="fullname" />
+<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 text-base font-normal leading-normal transition-all" placeholder="Enter your full name" type="text" id="fullname" name="fullname" />
 <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#637588] text-[20px]">person</span>
 </div>
  <p id="nameError" class="text-red-500 text-xs hidden"></p>
@@ -80,7 +82,7 @@
 <div class="flex flex-col gap-2">
 
 <div class="relative">
-<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 text-base font-normal leading-normal transition-all" placeholder="Enter your email" type="email" id="email"/>
+<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 text-base font-normal leading-normal transition-all" placeholder="Enter your email" type="email" id="email" name="email"/>
 <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#637588] text-[20px]">mail</span>
 </div>
  <p id="emailError" class="text-red-500 text-xs hidden"></p>
@@ -88,8 +90,8 @@
 <div class="flex flex-col gap-2">
 
 <div class="relative">
-<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 pr-12 text-base font-normal leading-normal transition-all" placeholder="Create a password" type="password" id="password"/>
-<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#637588] hover:text-primary transition-colors focus:outline-none">
+<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 pr-12 text-base font-normal leading-normal transition-all" placeholder="Create a password" type="password" id="password" name="password"/>
+<button type="button" id="togglePassword" aria-label="Toggle password visibility" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#637588] hover:text-primary transition-colors focus:outline-none">
 <span class="material-symbols-outlined text-[20px] block">visibility</span>
 </button>
 </div>
@@ -98,13 +100,13 @@
 <div class="flex flex-col gap-2">
 
 <div class="relative">
-<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 text-base font-normal leading-normal transition-all" placeholder="Confirm your password" type="password" id="confirmPassword"/>
+<input class="form-input flex w-full resize-none overflow-hidden rounded-lg text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#3b4754] bg-white dark:bg-[#111418] focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#637588] px-4 text-base font-normal leading-normal transition-all" placeholder="Confirm your password" type="password" id="confirmPassword" name="confirmPassword"/>
 <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 dark:text-[#637588] text-[20px]">lock_reset</span>
 </div>
  <p id="confirmPasswordError" class="text-red-500 text-xs hidden"></p>
 </div>
 <div class="flex items-start gap-3 mt-2">
-<input class="mt-1 size-4 rounded border-slate-300 dark:border-[#3b4754] text-primary focus:ring-primary dark:bg-[#1c2127]" type="checkbox" id="terms"/>
+<input class="mt-1 size-4 rounded border-slate-300 dark:border-[#3b4754] text-primary focus:ring-primary dark:bg-[#1c2127]" type="checkbox" id="terms" name="terms"/>
 <p class="text-sm text-slate-500 dark:text-[#9dabb9] leading-tight">
                         I agree to the <a class="text-primary hover:underline" href="#">Terms of Service</a> and <a class="text-primary hover:underline" href="#">Privacy Policy</a>.
                     </p>
@@ -131,3 +133,5 @@
 
 
 </body></html>
+<script src="/js/registerValidation.js"></script>
+<script src="/js/passwordToggle.js"></script>
